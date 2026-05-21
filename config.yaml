@@ -1,0 +1,53 @@
+##check the logs/learnErrorRates..out file to check the quantity of bases, reads, and samples utilized for learning error rates.
+subsample: False  #True or False
+subsample2LearnErrorRate: 0.2
+
+#Number of records to sample from the fastq file for plotQualityprofiling. DADA2's default is 500,000.
+nRecords: 100000
+
+#Default 1e8. The minimum number of total bases to use for error rate learning.
+learn_nbases: 100000000
+
+
+#If "consensus": The samples in a sequence table are independently checked for bimeras, and a consensus decision on each sequence variant is made.
+chimera_method: "consensus"
+
+
+#Initialize random number generator for reproducibility of taxonomy assignment
+seed: 100 
+
+
+
+#*****************
+#**** VSEARCH ****
+#*****************
+
+Identity: 0.993      # Minimum percent identity for a hit to be considered a match
+Maxaccepts: 30       # Maximum number of hits to consider per query
+URE_after_GTDB: True #True or False
+
+
+
+#*********************
+#*** All databases ***
+#*********************
+
+## Taxonomy using RDP classifier
+RDP_dbs:
+        # RDP: "/bulk/IMCshared_bulk/shared/dbs/16s_dbs/rdp_train_set_18.fa.gz"
+        #Silva: "/bulk/IMCshared_bulk/shared/dbs/16s_dbs/silva_nr99_v138.1_train_set.fa.gz"
+ GTDB: "/bulk/IMCshared_bulk/shared/dbs/T1D_db_updated/t1d_db2_withIDs_andDups_genus.fasta.gz"
+ URE: "/bulk/IMCshared_bulk/shared/dbs/GTDB_16S_r220/GTDB_bac120_arc53_ssu_r220_fullTaxo.fa.gz"
+# URE: "/bulk/IMCshared_bulk/shared/dbs/T1D_db/t1d_genus.fasta"
+
+RDP_species:
+        # RDP: "/bulk/IMCshared_bulk/shared/dbs/16s_dbs/rdp_species_assignment_18.fa.gz"
+        # Silva: "/bulk/IMCshared_bulk/shared/dbs/16s_dbs/silva_species_assignment_v138.1.fa.gz"
+ GTDB: "/bulk/IMCshared_bulk/shared/dbs/T1D_db_updated/t1d_db2_withIDs_andDups_species.fasta.gz"
+ URE: "/bulk/IMCshared_bulk/shared/dbs/GTDB_16S_r220/GTDB_bac120_arc53_ssu_r220_species.fa.gz"
+ # URE: "/bulk/IMCshared_bulk/shared/dbs/T1D_db/t1d_species.fasta"
+
+## Taxonomy using vsearch
+vsearch_DBs:
+ URE: "/bulk/IMCshared_bulk/shared/dbs/GTDB_16S_r220/GTDB_bac120_arc53_ssu_r220_fullTaxo.fa.gz"
+ GTDB: "/bulk/IMCshared_bulk/shared/dbs/T1D_db_updated/t1d_db2_withIDs_andDups_fullTaxo.fasta.gz"
