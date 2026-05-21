@@ -13,4 +13,4 @@ SInthetic MicroBiome Analysis - a program that analyzes synthetic/contrived/desi
 
 ## Input files
 
-# Output files
+## Output files
