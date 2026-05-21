@@ -33,11 +33,13 @@ vsearch_dada2_merged.tsv Provides a single, merged annotation per ASV by combini
 
 ## Input files
 
-SIMBA requires the following:
+SIMBA requires the following files and directories:
 
 - A path to your directory where your annotated genomes are located
 - A file with your sample names (i.e. sample_list.txt)
 - A file with the copy number variation of the 16S gene (i.e. 16S_count.txt)
 - An ASV count table where the columns are the sample names (the sample names must match the file with your samples)
+
+There are some examples of the formatting needed for these files/directories in the `tutorial` path of this repository.
 
 ## Output files
