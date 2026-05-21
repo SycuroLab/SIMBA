@@ -26,3 +26,4 @@
 3874R_0_F_NS1_week10_S75_L001_R2_001.fastq.gz filter=lfs diff=lfs merge=lfs -text
 3896R_0_M_S2_week10_S52_L001_R1_001.fastq.gz filter=lfs diff=lfs merge=lfs -text
 3896R_L_M_S2_week10_S53_L001_R1_001.fastq.gz filter=lfs diff=lfs merge=lfs -text
+*.gz filter=lfs diff=lfs merge=lfs -text
